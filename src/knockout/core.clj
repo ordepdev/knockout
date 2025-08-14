@@ -1,6 +1,7 @@
 (ns knockout.core
-  (:require [clojure.java.io :as io]
-            [clojure.tools.cli :as cli])
+  (:require
+   [clojure.java.io :as io]
+   [clojure.tools.cli :as cli])
   (:gen-class))
 
 (defn read-names [file-path]
@@ -42,7 +43,7 @@
     :default "resources/names.txt"]
    ["-s" "--seed SEED" "Seed for random number generator"
     :parse-fn #(Long/parseLong %)
-    :validate [#(< 0 % 0x100000000) "Must be a 64-bit integer"]] 
+    :validate [#(< 0 % 0x100000000) "Must be a 64-bit integer"]]
    ["-i" "--interactive" "Run in interactive mode"]
    ["-h" "--help"]])
 

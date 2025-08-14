@@ -1,6 +1,7 @@
 (ns knockout.core-test
-  (:require [clojure.test :refer :all]
-            [knockout.core :refer :all]))
+  (:require
+   [clojure.test :refer :all]
+   [knockout.core :refer :all]))
 
 (deftest deterministic-shuffle-test
   (testing "deterministic-shuffle with a fixed seed"
